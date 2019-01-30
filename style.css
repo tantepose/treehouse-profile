@@ -1,0 +1,16 @@
+html {
+    background-color: #222222;
+    color: rgb(196, 196, 196);
+}
+
+img {
+    width: 100px;
+}
+
+#badges, header {
+    text-align: center;
+}
+
+.badge {
+    margin-bottom: 7rem;
+}
