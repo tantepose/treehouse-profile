@@ -20,6 +20,7 @@
             }
         }
     }
+    
     profile_skills.innerHTML = skills_html;
 
     // render badges
@@ -28,22 +29,27 @@
     var badges_html = "";
 
     for (var badge in badges) {
-        
-        var course_list = "";
-        for (var course in badges[badge].courses) {
-            course_list += badges[badge].courses[course].title + ", ";
-        }
-
-        const badge_name = badges[badge].name;
-        const badge_icon = badges[badge].icon_url.substring(badges[badge].icon_url.lastIndexOf('/')+1);
-        
-        badges_html += 
-            "<div class='badge'>" +
-                "<h3>" + badge_name + "</h3>" +
-                "<img src='img/" + badge_icon + "'>" +
-                "<p><i>(" + course_list + ")</i></p>" +
-            "</div>"
+        if (badges[badge].name != "Newbie") { // skip newbie badge
+            var course_list = "";
+            for (var course in badges[badge].courses) {
+                course_list += badges[badge].courses[course].title + ", ";
+            }
+    
+            const badge_name = badges[badge].name;
+            const badge_icon = badges[badge].icon_url.substring(badges[badge].icon_url.lastIndexOf('/')+1);
+            
+            badges_html += 
+                "<div class='badge'>" +
+                    "<h3>" + badge_name + "</h3>" +
+                    "<img src='img/" + badge_icon + "'>" +
+                    "<p><i>(" + course_list + ")</i></p>" +
+                "</div>"
+        }                
     }
+
     profile_badges.innerHTML = badges_html;
+
+    // scrollreveal.js
+    ScrollReveal().reveal('.badge');
 
 } ());
