@@ -33,8 +33,7 @@ p {
     font-weight: bold;  
 }
 
-header {
-    margin-bottom: 8em;
+header, footer {
     text-align: left;
 }
 
