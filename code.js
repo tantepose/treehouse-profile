@@ -1,9 +1,4 @@
 (function () {
-
-    // render header
-    const profile_name = document.getElementById("name");
-    profile_name.innerText = profile.name;
-
     // render skills w/points
     const profile_skills = document.getElementById("skills");
     const skills = profile.points;
