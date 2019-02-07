@@ -7,7 +7,7 @@ html {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
     font-weight: 50;
     margin: 0;
 }
@@ -35,14 +35,10 @@ p {
 
 header {
     margin-bottom: 8em;
+    text-align: left;
 }
-/* header img {
-    width: 200px;
-    float: left;
-    margin-right: 3em;
-} */
 
-#skills-container, header {
+#skills-container, #badges-container, header {
     margin-bottom: 8em;
 }
 
@@ -109,18 +105,22 @@ ul {
 /* Landscape phone to portrait tablet */
 @media (max-width: 900px) {
     html {
-        margin: 1em;
+        margin: 2em;
     }
 
     #badges {
         grid-template-columns: 1fr 1fr;
     }
 
+    h1 {
+        font-size: 4em;
+    }
+
 }
 /* Landscape phones and down */
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     html {
-        margin: 0em;
+        margin: 1em;
     }
 
     #badges {
@@ -129,6 +129,11 @@ ul {
 
     #skills {
         grid-template-columns: 1fr 1fr;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-top: .3em;
     }
 
 }
