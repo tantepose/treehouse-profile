@@ -4,7 +4,7 @@
     const profile_name = document.getElementById("name");
     profile_name.innerText = profile.name;
 
-    // render skills
+    // render skills w/points
     const profile_skills = document.getElementById("skills");
     const skills = profile.points;
     var skills_html = "";
@@ -14,9 +14,9 @@
             
             if (skill != "total") { // skip "total" skill
                 skills_html += 
-                    "<li><p>" +
-                        skill + ": " + skills[skill] + 
-                    "</p></li>";
+                    "<div class='skill'><h3>" +
+                        "<b>" + skill + "</b></br>" + skills[skill] + 
+                    "</h3></div>";
             }
         }
     }
@@ -31,12 +31,16 @@
     for (var badge in badges) {
         if (badges[badge].name != "Newbie") { // skip "newbie" badge
             
-            // get courses within badge
-            var course_list = "";
+            // include courses within badge
+            var course_list = "<ul>";
             for (var course in badges[badge].courses) {
-                course_list += badges[badge].courses[course].title + ", ";
+                course_list += 
+                    "<li>" +
+                        badges[badge].courses[course].title +
+                    "</li>";
             }
-    
+            course_list += "</ul>";
+
             const badge_name = badges[badge].name;
             const badge_icon = badges[badge].icon_url.substring(badges[badge].icon_url.lastIndexOf('/')+1);
             
@@ -44,8 +48,8 @@
                 "<div class='badge'>" +
                     "<h3>" + badge_name + "</h3>" +
                     "<img src='img/" + badge_icon + "'>" +
-                    "<p><i>(" + course_list + ")</i></p>" +
-                "</div>"
+                    course_list +
+                "</div>";
         }                
     }
 
