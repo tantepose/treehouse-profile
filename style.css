@@ -28,6 +28,10 @@ p {
     font-size: 1.3em;
 }
 
+a {
+    color: #f2b632;
+}
+
 .badge h3 {
     font-size: 1.5em;
     font-weight: bold;  
