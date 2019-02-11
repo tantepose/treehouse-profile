@@ -37,7 +37,16 @@ header, footer {
     text-align: left;
 }
 
-#skills-container, #badges-container, header {
+footer {
+    margin-top: 5em;
+    margin-left: 2em;
+}
+
+footer p {
+    margin: .3em;
+}
+
+#skills-container, header {
     margin-bottom: 8em;
 }
 

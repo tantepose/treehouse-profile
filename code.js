@@ -51,6 +51,11 @@
     profile_badges.innerHTML = badges_html; // render results
 
     // scrollreveal.js
-    ScrollReveal().reveal('.badge');
+    ScrollReveal().reveal('.badge', {
+        delay: 50,
+        easing: 'ease-in',
+        scale: .8,
+        duration: 100
+    });
 
 } ());
