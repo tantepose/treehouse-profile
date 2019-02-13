@@ -50,11 +50,11 @@
 
     profile_badges.innerHTML = badges_html; // render results
 
-    // scrollreveal.js
+    // initiate scrollreveal.js
     ScrollReveal().reveal('.badge', {
-        delay: 50,
+        delay: 100,
         easing: 'ease-in',
-        scale: .8,
+        scale: .7,
         duration: 100
     });
 
