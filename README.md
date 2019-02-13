@@ -1,2 +1,2 @@
-# treehouse-profile
-render treehouse profile
+# treehouse-profile 👩
+Render a Treehouse user profile from teamtreehouse.com/profile.json.
